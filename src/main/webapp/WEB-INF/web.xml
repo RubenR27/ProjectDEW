@@ -11,4 +11,16 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.xhtml</welcome-file>
   </welcome-file-list>
+  <filter>
+    <filter-name>FiltroLogs</filter-name>
+    <filter-class>filtros.Logs</filter-class>
+</filter>
+<context-param>
+    <param-name>rutaLog</param-name>
+    <param-value>//home/dew/proyecto/logs/acceso.log</param-value> 
+</context-param>
+<filter-mapping>
+    <filter-name>FiltroLogs</filter-name>
+    <url-pattern>/*</url-pattern> <!-- Se activa para toda la app -->
+</filter-mapping>
 </web-app>
