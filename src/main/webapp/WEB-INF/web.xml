@@ -11,4 +11,54 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.xhtml</welcome-file>
   </welcome-file-list>
+  
+  <!-- Declaración de roles de seguridad de la aplicación -->
+  <security-role>
+      <description>Rol para el alumnado</description>
+      <role-name>rolalu</role-name>
+  </security-role>
+  
+  <security-role>
+      <description>Rol para el profesorado</description>
+      <role-name>rolpro</role-name>
+  </security-role>
+  
+  <!-- 1. Restricción para el Alumnado -->
+  <security-constraint>
+      <web-resource-collection>
+          <web-resource-name>Area exclusiva de Alumnos</web-resource-name>
+          <!-- Protegemos todas las URLs que empiecen por /alumno/ -->
+          <url-pattern>/alumno/*</url-pattern>
+      </web-resource-collection>
+      <auth-constraint>
+          <!-- Solo los usuarios con este rol pueden entrar -->
+          <role-name>rolalu</role-name>
+      </auth-constraint>
+  </security-constraint>
+
+  <!-- 2. Restricción para el Profesorado -->
+  <security-constraint>
+      <web-resource-collection>
+          <web-resource-name>Area exclusiva de Profesores</web-resource-name>
+          <!-- Protegemos todas las URLs que empiecen por /profesor/ -->
+          <url-pattern>/profesor/*</url-pattern>
+      </web-resource-collection>
+      <auth-constraint>
+          <!-- Solo los usuarios con este rol pueden entrar -->
+          <role-name>rolpro</role-name>
+      </auth-constraint>
+  </security-constraint>
+
+  <!-- Configuración del método de Login con Formulario HTML -->
+  <login-config>
+      <auth-method>FORM</auth-method>
+      <realm-name>Area Protegida de Notas OnLine</realm-name>
+      <form-login-config>
+          <!-- Ruta a la página HTML de bienvenida -->
+          <form-login-page>/bienvenida.html</form-login-page>
+          <!-- Ruta a una página por si el usuario se equivoca de contraseña -->
+          <form-error-page>/error-login.html</form-error-page>
+      </form-login-config>
+  </login-config>
+  
 </web-app>
