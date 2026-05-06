@@ -1,0 +1,52 @@
+# 📝 Acta de Reunión - [Nombre del Proyecto]
+
+## 📅 Información General
+| Atributo | Detalle |
+| :--- | :--- |
+| **Fecha** | [Día] de [Mes] de 202X |
+| **Hora** | [00:00] - [00:00] |
+| **Sede/Canal** | [📍 Oficina / 🎧 Canal Discord / 💻 Meet] |
+| **Estado** | 🟢 Finalizada / 🟡 En revisión |
+
+---
+
+## 👥 Asistentes
+*   **Facilitador:** @usuario_github
+*   **Escriba:** @usuario_github
+*   **Participantes:**
+    *   @miembro1
+    *   @miembro2
+
+---
+
+## 🎯 Orden del Día
+1. Revisión de *Issues* pendientes.
+2. Discusión sobre el nuevo despliegue en `main`.
+3. Reparto de tareas para el Sprint.
+
+---
+
+## 📝 Notas de la Sesión
+> [!IMPORTANT]
+> Resumen de los puntos clave discutidos durante la reunión.
+
+*   **Punto 1:** Se analizó el bug reportado en el commit `abc1234`.
+*   **Punto 2:** La arquitectura se mantendrá según lo planeado, pero se añadirá una capa de validación extra.
+
+---
+
+## ✅ Acuerdos y Tareas (Action Items)
+Usa el siguiente formato para asignar tareas directamente en GitHub:
+
+- [ ] **@usuario** | Crear la documentación de la API | `Fecha: DD/MM`
+- [ ] **@usuario** | Corregir error de CSS en el header | `Fecha: DD/MM`
+- [x] **@usuario** | Configurar el entorno de staging | `Completado`
+
+---
+
+## 🚀 Próximos Pasos
+- **Próxima reunión:** [Fecha y Hora]
+- **Objetivo:** Revisión de la versión Alpha.
+
+---
+*Generado automáticamente para el repositorio [Nombre-del-Repo]*
