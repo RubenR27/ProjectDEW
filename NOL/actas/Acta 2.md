@@ -38,22 +38,34 @@
 *   **Punto 2:** Se han designado las responsabilidades del equipo.
 *   **Punto 3:** Se ha realizado la configuración inicial de Tomcat.
 *   **Punto 4:** Se preparó el entorno de trabajo creando el GitHub y el repositorio.
-*   **Punto 5:** Cada int
+*   **Punto 5:** Se ha configurado el web.xml para que funcione correctamente con Tomcat.
+*   **Punto 6:** Se ha iniciado el diseño del script de la base de datos.
+*   **Punto 7:** Se ha realizado la interfaz correspondiente para la lista de asignaturas.
 
 ---
 
-## ✅ Acuerdos y Tareas (Action Items)
-Usa el siguiente formato para asignar tareas directamente en GitHub:
+## 4. Problemas Encontrados
 
-- [ ] **@usuario** | Crear la documentación de la API | `Fecha: DD/MM`
-- [ ] **@usuario** | Corregir error de CSS en el header | `Fecha: DD/MM`
-- [x] **@usuario** | Configurar el entorno de staging | `Completado`
+Obstáculos técnicos encontrados.
+
+- **Técnico:** Se crearon errores al asignar asignaturas en el script de la base de datos, aunque finalmente quedaron resueltos.
+- **Organizativo:** Hubo pequeñas dudas sobre la organización inicial del repositorio y la estructura de carpetas del proyecto.
+- **Organizativo:** Se dedicó parte del tiempo a coordinar tareas y familiarizarse con la estructura general del proyecto.
 
 ---
+## 6. Reparto de Tareas Pendientes
 
+Tareas que tienen que estar acabas para la próxima sesión.
+
+| Responsable | Tarea Asignada | Fecha Límite |
+|---|---|---|
+| David Miralles | Terminar script de la base de datos | 13/05 |
+| Diego Jornet | Terminar interfaz asignada | [DD/MM] |
+
+--- 
 ## 🚀 Próximos Pasos
-- **Próxima reunión:** [Fecha y Hora]
-- **Objetivo:** Revisión de la versión Alpha.
+- **Próxima reunión:** 13 de mayo a las 11:30.
+- **Objetivo:** Comentar tareas asignadas aparte y seguir con los pasos del trabajo.
 
 ---
-*Generado automáticamente para el repositorio [Nombre-del-Repo]*
+
