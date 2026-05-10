@@ -66,6 +66,7 @@ Tareas que tienen que estar acabas para la próxima sesión.
 ## 🚀 Próximos Pasos
 - **Próxima reunión:** 13 de mayo a las 11:30.
 - **Objetivo:** Comentar tareas asignadas aparte y seguir con los pasos del trabajo.
+- asdas
 
 ---
 
