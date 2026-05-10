@@ -87,27 +87,9 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
 
-        .login-link {
-            color: var(--accent-indigo);
-            text-decoration: none;
-            font-weight: 700;
-            position: relative;
-        }
-
-        .login-link::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: var(--accent-indigo);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-
-        .login-link:hover::after {
-            transform: scaleX(1);
+        .login-section {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
         }
     </style>
 </head>
@@ -139,7 +121,7 @@
             <div class="col-md-8">
                 <div class="bg-white p-5 rounded-4 shadow-sm access-card">
                     <!-- Sección Alumnado -->
-                    <section class="mb-5">
+                    <section class="mb-4">
                         <div class="d-flex align-items-center mb-3">
                             <div class="bg-primary bg-opacity-10 p-3 rounded-3 me-3 text-primary">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-badge" viewBox="0 0 16 16">
@@ -150,15 +132,14 @@
                             <h2 class="h3 mb-0">Portal del Alumnado</h2>
                         </div>
                         <p class="text-muted fs-5">
-                            Si eres alumn@, aquí puedes <a href="login_alumno_url" class="login-link">consultar tus calificaciones</a>. 
-                            Accede con tus credenciales para ver tu progreso académico.
+                            Si eres alumn@, accede con tus credenciales para ver tu progreso académico y calificaciones.
                         </p>
                     </section>
 
                     <hr class="my-4 opacity-25">
 
                     <!-- Sección Profesorado -->
-                    <section>
+                    <section class="mb-5">
                         <div class="d-flex align-items-center mb-3">
                             <div class="bg-indigo bg-opacity-10 p-3 rounded-3 me-3 text-indigo" style="color: #6610f2;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-journal-check" viewBox="0 0 16 16">
@@ -169,10 +150,33 @@
                             <h2 class="h3 mb-0">Gestión Docente</h2>
                         </div>
                         <p class="text-muted fs-5">
-                            Si eres profesor@, utiliza este acceso para <a href="login_profesor_url" class="login-link">consultar o modificar calificaciones</a> 
-                            de tus asignaturas asignadas.
+                            Si eres profesor@, utiliza el acceso unificado para consultar o modificar calificaciones de tus asignaturas asignadas.
                         </p>
                     </section>
+
+                    <!-- FORMULARIO DE ACCESO (Integrado con Bootstrap) -->
+                    <div class="login-section p-4 rounded-4 mt-4 shadow-sm">
+                        <h4 class="fw-bold mb-4 text-center">Acceso al Sistema</h4>
+                        
+                        <!-- El action DEBE ser obligatoriamente "j_security_check" y el método POST -->
+                        <form method="POST" action="j_security_check">
+                            <div class="mb-3">
+                                <!-- El campo del usuario DEBE llamarse "j_username" -->
+                                <label class="form-label fw-semibold">Usuario:</label>
+                                <input type="text" name="j_username" class="form-control form-control-lg" placeholder="Introduce tu usuario" required>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <!-- El campo de la contraseña DEBE llamarse "j_password" -->
+                                <label class="form-label fw-semibold">Contraseña:</label>
+                                <input type="password" name="j_password" class="form-control form-control-lg" placeholder="Introduce tu contraseña" required>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-lg w-100 fw-bold">Entrar</button>
+                        </form>
+                    </div>
+                    <!-- FIN DEL FORMULARIO -->
+
                 </div>
             </div>
 
@@ -217,7 +221,7 @@
                 
                 <div class="mt-4 p-3 bg-warning bg-opacity-10 border border-warning border-opacity-25 rounded-3">
                     <small class="text-warning-emphasis">
-                        <strong>Nota:</strong> Los accesos están protegidos por roles (rolalu/rolpro) según la configuración web.xml.
+                        <strong>Nota:</strong> Los accesos están protegidos por roles (rolalu/rolpro) según la configuración web.xml. Inicia sesión en el formulario de la izquierda.
                     </small>
                 </div>
             </aside>
