@@ -62,4 +62,5 @@ public class Logs implements Filter {
     public void destroy() {
         // nada que limpiar
     }
+ 
 }
