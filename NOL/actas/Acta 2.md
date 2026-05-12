@@ -1,6 +1,6 @@
-# 📝 Acta de Reunión - Proyecto DEW
+# Acta de Reunión - Proyecto DEW
 
-## 📅 Información General
+## Información General
 | Información | Detalle |
 | :--- | :--- |
 | **Fecha** | 6 de mayo de 2026 |
@@ -10,7 +10,7 @@
 
 ---
 
-## 👥 Asistentes
+## Asistentes
 *   **Presidente::** Rubén Rico
 *   **Secretaria:** Carmen Paredes
 *   **Participantes:**
@@ -21,7 +21,7 @@
 
 ---
 
-## 🎯 Objetivos
+## Objetivos
 1. Realizar la interfaz de Bienvenida y LogIn.
 2. Realizar versión 0 y versión 1 Registro de accesos.
 3. Configurar los usuarios y roles.
@@ -32,7 +32,7 @@
 
 ---
 
-## 📝 Notas de la Sesión
+## Notas de la Sesión
 
 *   **Punto 1:** Se ha realizado la interfaz de bienvenida y la de LogIn.
 *   **Punto 2:** Se han designado las responsabilidades del equipo.
@@ -44,16 +44,14 @@
 
 ---
 
-## 4. Problemas Encontrados
-
-Obstáculos técnicos encontrados.
+## Problemas Encontrados
 
 - **Técnico:** Se crearon errores al asignar asignaturas en el script de la base de datos, aunque finalmente quedaron resueltos.
 - **Organizativo:** Hubo pequeñas dudas sobre la organización inicial del repositorio y la estructura de carpetas del proyecto.
 - **Organizativo:** Se dedicó parte del tiempo a coordinar tareas y familiarizarse con la estructura general del proyecto.
 
 ---
-## 6. Reparto de Tareas Pendientes
+## Reparto de Tareas Pendientes
 
 Tareas que tienen que estar acabas para la próxima sesión.
 
@@ -63,10 +61,10 @@ Tareas que tienen que estar acabas para la próxima sesión.
 | Diego Jornet | Terminar interfaz asignada | [DD/MM] |
 
 --- 
-## 🚀 Próximos Pasos
+## Próximos Pasos
 - **Próxima reunión:** 13 de mayo a las 11:30.
 - **Objetivo:** Comentar tareas asignadas aparte y seguir con los pasos del trabajo.
-- asdas
 
 ---
+
 
