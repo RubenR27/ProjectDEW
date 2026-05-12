@@ -60,13 +60,13 @@ Tareas que tienen que estar acabas para la próxima sesión.
 | Responsable | Tarea Asignada | Fecha Límite |
 |---|---|---|
 | David Miralles | Terminar script de la base de datos | 13/05 |
-| Diego Jornet | Terminar interfaz asignada | [DD/MM] |
+| Diego Jornet | Terminar interfaz lista asignaturas | 13/05 |
+| Carmen Paredes | Terminar acta | 13/05 |
 
 --- 
 ## Próximos Pasos
 - **Próxima reunión:** 13 de mayo a las 11:30.
 - **Objetivo:** Comentar tareas asignadas aparte y seguir con los pasos del trabajo.
-- asdas
 
 ---
 **Firma de la secretaría:**
