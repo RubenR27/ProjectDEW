@@ -26,4 +26,53 @@
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>
 
+	 <!-- ===== SERVLETS DEL ALUMNO ===== -->
+  <servlet>
+    <servlet-name>ListaAsignaturas</servlet-name>
+    <servlet-class>servlets.alumno.ListaAsignaturas</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListaAsignaturas</servlet-name>
+    <url-pattern>/alumno/asignaturas</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DetalleAsignatura</servlet-name>
+    <servlet-class>servlets.alumno.DetalleAsignatura</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DetalleAsignatura</servlet-name>
+    <url-pattern>/alumno/detalle</url-pattern>
+  </servlet-mapping>
+  
+
+  <!-- ===== SEGURIDAD ===== -->
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>Zona Alumno</web-resource-name>
+      <url-pattern>/alumno/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>rolalu</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  <login-config>
+  <auth-method>FORM</auth-method>
+  <realm-name>NOL</realm-name>
+  <form-login-config>
+    <form-login-page>/loginPrueba.html</form-login-page>
+    <form-error-page>/LoginErrorPrueba.html</form-error-page>
+  </form-login-config>
+</login-config>
+
+  <security-role>
+    <role-name>rolalu</role-name>
+  </security-role>
+  <security-role>
+    <role-name>rolpro</role-name>
+  </security-role>
+
+
+
 </web-app>

@@ -83,6 +83,13 @@ public class CentroEducativoClient {
             return res.isSuccessful();
         }
     }
+    
+    public String loginYGet(String endpoint, String dni, String password) throws IOException {
+        String key = this.login(dni, password);
+        if (key == null) return null;
+        return this.get(endpoint, key);
+    }
+    
 
     public static void main(String[] args) {
         CentroEducativoClient cliente = new CentroEducativoClient();
