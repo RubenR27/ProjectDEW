@@ -11,11 +11,11 @@
 ---
 
 ## Asistentes
-*   **Presidente::** Rubén Rico
-*   **Secretaria:** Carmen Paredes
+*   **Presidente::** Rubén Rico Martínez
+*   **Secretaria:** Carmen Paredes Ramos
 *   **Participantes:**
-    *   Remei Romero
-    *   Iván Ariza
+    *   Remei Romero Ferrandis
+    *   Iván Ariza Galan
     *   Diego Jornet Botella
     *   David Miralles Avilés
 
@@ -46,6 +46,8 @@
 
 ## Problemas Encontrados
 
+Obstáculos técnicos encontrados.
+
 - **Técnico:** Se crearon errores al asignar asignaturas en el script de la base de datos, aunque finalmente quedaron resueltos.
 - **Organizativo:** Hubo pequeñas dudas sobre la organización inicial del repositorio y la estructura de carpetas del proyecto.
 - **Organizativo:** Se dedicó parte del tiempo a coordinar tareas y familiarizarse con la estructura general del proyecto.
@@ -58,7 +60,8 @@ Tareas que tienen que estar acabas para la próxima sesión.
 | Responsable | Tarea Asignada | Fecha Límite |
 |---|---|---|
 | David Miralles | Terminar script de la base de datos | 13/05 |
-| Diego Jornet | Terminar interfaz asignada | [DD/MM] |
+| Diego Jornet | Terminar interfaz lista asignaturas | 13/05 |
+| Carmen Paredes | Terminar acta | 13/05 |
 
 --- 
 ## Próximos Pasos
@@ -66,5 +69,5 @@ Tareas que tienen que estar acabas para la próxima sesión.
 - **Objetivo:** Comentar tareas asignadas aparte y seguir con los pasos del trabajo.
 
 ---
-
-
+**Firma de la secretaría:**
+Carmen Paredes
