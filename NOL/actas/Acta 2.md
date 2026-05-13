@@ -11,7 +11,7 @@
 ---
 
 ## Asistentes
-*   **Presidente::** Rubén Rico Martínez
+*   **Presidente:** Rubén Rico Martínez
 *   **Secretaria:** Carmen Paredes Ramos
 *   **Participantes:**
     *   Remei Romero Ferrandis
