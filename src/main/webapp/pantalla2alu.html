@@ -3,50 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notas Online — NOL</title>
-    <link rel="stylesheet" href="estils2.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>NOL — Notas Online</title>
+    <link rel="stylesheet" href="estils.css">
 </head>
 <body>
 
-    <div class="tipografies">
+    <nav class="navbar">
 
-        <h1>Notas Online</h1>
+        <div class="navbar-marca">
+            NOL <span>·</span> Notas Online
+        </div>
 
-        <div class="botones">
+        <div class="navbar-acciones">
 
-            <button
-            onclick="mostrarAsignaturas()"
-            class="btn btn-outline-light">
+            <button onclick="mostrarAsignaturas()" class="btn-nav" id="btn-asig">
                 Mis asignaturas
             </button>
 
-            <button
-            onclick="mostrarCertificado()"
-            class="btn btn-outline-light">
+            <button onclick="mostrarCertificado()" class="btn-nav" id="btn-cert">
                 Certificado
             </button>
 
-            <span class="text-light" style="font-size:14px;">
-                Eres Alumno
-            </span>
-
-            <button class="btn btn-danger">
-                Salir
-            </button>
+            <div class="navbar-usuario">
+                <span class="chip-rol">Alumno</span>
+                <button class="btn-salir">Salir</button>
+            </div>
 
         </div>
 
-    </div>
+    </nav>
 
-    <div class="bloc" id="contenido"></div>
+    <div class="contenedor-principal" id="contenido"></div>
 
     <div class="pie-pagina">
         
     </div>
 
-    <script src="app2.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
 
 </body>
 </html>
