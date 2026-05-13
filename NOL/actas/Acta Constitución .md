@@ -2,8 +2,8 @@
 
 **Proyecto:** ProjectDEW 
 **Asignatura:** DEW 
-**Fecha:** [30/04/2026]  
-**Hora:** [11:30 - 13:00]  
+**Fecha:** 30/04/2026  
+**Hora:** 11:30 - 13:00 
 **Lugar / Modalidad:** Presencial
 
 ---
