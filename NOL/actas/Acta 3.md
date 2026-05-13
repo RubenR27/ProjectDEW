@@ -57,7 +57,7 @@ Tareas que tienen que estar acabas para la próxima sesión.
 
 --- 
 ## Próximos Pasos
-- **Próxima reunión:** 20 de mayo a las 11:30.
+- **Próxima reunión:** 13 de mayo a las 13:00.
 - **Objetivo:** Repartir tareas de la siguiente entrega.
 
 ---
