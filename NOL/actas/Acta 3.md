@@ -25,6 +25,7 @@
 1. Probar código realizado la sesión anterior.
 2. Modificar las interfaces para que sigan la misma apariencia.
 3. Configurar la funcionalidad de los servlets.
+4. Preparar todo para la entrega del Hito 1.
 
 ---
 
@@ -33,6 +34,7 @@
 *   **Punto 1:** Se han realizado pruebas exhaustivas sobre el código desarrollado en la sesión anterior para verificar la estabilidad de la plataforma.
 *   **Punto 2:** Se han modificado todas las interfaces (Bienvenida, LogIn y Lista de Asignaturas) para asegurar que posean un acabado uniforme.
 *   **Punto 3:** Se ha avanzado en la lógica de los Servlets para que sean capaces de atender solicitudes y generar contenido HTML dinámico.
+*   **Punto 4:** Se ha revisado el apéndice paso por paso para preparar la entrega del 17 de mayo. 
   
 ---
 
