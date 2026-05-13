@@ -1,0 +1,110 @@
+.tipografies {
+    font-family: 'Arial', sans-serif;
+    background-color: #20c997;
+    font-weight: bold;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tipografies h1 {
+    color: white;
+    margin: 0;
+    font-size: 22px;
+}
+
+.botones {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bloc {
+    width: 80%;
+    min-height: 500px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.nota-alta {
+    background-color: #d1e7dd;
+    color: #0a3622;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.nota-media {
+    background-color: #fff3cd;
+    color: #664d03;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.nota-baja {
+    background-color: #f8d7da;
+    color: #58151c;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+.cert-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.cert-tabla th {
+    background-color: #20c997;
+    color: white;
+    padding: 10px 14px;
+    text-align: left;
+}
+
+.cert-tabla td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.cert-media {
+    margin-top: 15px;
+    padding: 12px 16px;
+    background-color: #f0fdf8;
+    border-left: 4px solid #20c997;
+    border-radius: 6px;
+}
+
+.pie-pagina {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+}
+
+
+@media print {
+
+    .tipografies {
+        display: none;
+    }
+
+    .pie-pagina {
+        display: none;
+    }
+
+    .bloc {
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .btn {
+        display: none;
+    }
+}
