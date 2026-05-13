@@ -48,54 +48,41 @@ function colorNota(nota) {
 }
 
 
+function setNavActivo(id) {
+
+    document.querySelectorAll('.btn-nav').forEach(b => b.classList.remove('activo'));
+
+    const btn = document.getElementById(id);
+    if (btn) btn.classList.add('activo');
+}
+
+
 function mostrarAsignaturas() {
 
+    setNavActivo('btn-asig');
+
     let html = `
-        <h2 class="mb-4">Mis asignaturas</h2>
-        <p class="text-muted mb-4">
-            ${alumno.nombre} — ${alumno.dni}
-        </p>
+        <div class="seccion-titulo">Mis asignaturas</div>
+        <div class="seccion-subtitulo">${alumno.nombre} &nbsp;·&nbsp; ${alumno.dni}</div>
     `;
 
     asignaturas.forEach(asig => {
 
         html += `
+            <div class="asig-card">
 
-            <div class="card shadow-sm mb-3">
-
-                <div class="card-body d-flex justify-content-between align-items-center">
-
-                    <div>
-
-                        <h5 class="card-title mb-1">
-                            ${asig.nombre}
-                            <span class="text-muted" style="font-size:14px;">
-                                (${asig.acronimo})
-                            </span>
-                        </h5>
-
-                        <p class="mb-0 text-muted" style="font-size:14px;">
-                            Curso ${asig.curso} · Cuatrimestre ${asig.cuatrimestre} · ${asig.creditos} créditos
-                        </p>
-
+                <div>
+                    <div class="asig-nombre">${asig.nombre}</div>
+                    <div class="asig-meta">
+                        ${asig.acronimo} &nbsp;·&nbsp; Curso ${asig.curso} &nbsp;·&nbsp; Cuatrimestre ${asig.cuatrimestre} &nbsp;·&nbsp; ${asig.creditos} ECTS
                     </div>
+                </div>
 
-                    <div class="d-flex align-items-center gap-3">
-
-                        <span class="${colorNota(asig.nota)}" style="font-weight:bold;">
-                            ${asig.nota}
-                        </span>
-
-                        <button
-                        onclick="mostrarDetalles(${asig.id})"
-                        class="btn btn-outline-success btn-sm">
-
-                            Ver detalles
-
-                        </button>
-
-                    </div>
-
+                <div class="asig-derecha">
+                    <span class="badge-nota ${colorNota(asig.nota)}">${asig.nota}</span>
+                    <button onclick="mostrarDetalles(${asig.id})" class="btn-detalle">
+                        Ver detalles
+                    </button>
                 </div>
 
             </div>
@@ -112,65 +99,64 @@ function mostrarDetalles(id) {
 
     if (!asig) return;
 
+    const iniciales = asig.acronimo;
+
     const lorem = `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Nulla facilisi. Sed euismod, nisl vel ultricies lacinia,
-    nisl nisl aliquam nisl, nec aliquam nisl nisl sit amet nisl.`;
+    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.`;
 
     let html = `
 
-        <button
-        onclick="mostrarAsignaturas()"
-        class="btn btn-outline-secondary btn-sm mb-4">
-            ← Volver
+        <button onclick="mostrarAsignaturas()" class="btn-volver">
+            ← Volver a mis asignaturas
         </button>
 
-        <h2 class="mb-1">${asig.nombre}</h2>
-        <p class="text-muted mb-4">${asig.acronimo} · Curso ${asig.curso}</p>
+        <div class="seccion-titulo">${asig.nombre}</div>
+        <div class="seccion-subtitulo">Detalle de asignatura</div>
 
-        <div class="row">
+        <div class="detalle-grid">
 
-            <div class="col-md-4 text-center mb-4">
-
-                <div style="
-                    width: 120px;
-                    height: 120px;
-                    border-radius: 50%;
-                    background-color: #d3f9f0;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    font-size: 40px;
-                    margin: 0 auto 15px auto;
-                ">
-                    📚
+            <div>
+                <div class="detalle-avatar">${iniciales}</div>
+                <div class="detalle-nota-grande">
+                    <span class="nota-numero badge-nota ${colorNota(asig.nota)}">${asig.nota}</span>
+                    <span class="nota-label">Calificación</span>
                 </div>
-
-                <span class="${colorNota(asig.nota)}" style="font-size:28px; font-weight:bold;">
-                    ${asig.nota}
-                </span>
-
             </div>
 
-            <div class="col-md-8">
+            <div class="detalle-ficha">
 
-                <div class="card shadow-sm">
-
-                    <div class="card-body">
-
-                        <p><strong>Profesor:</strong> ${asig.profesor}</p>
-                        <p><strong>Créditos:</strong> ${asig.creditos} ECTS</p>
-                        <p><strong>Cuatrimestre:</strong> ${asig.cuatrimestre}</p>
-                        <p><strong>Matriculado en:</strong> ${alumno.nombre}</p>
-
-                        <hr>
-
-                        <p class="text-muted" style="font-size:14px;">
-                            ${lorem}
-                        </p>
-
-                    </div>
-
+                <div class="ficha-fila">
+                    <span class="ficha-label">Asignatura</span>
+                    <span class="ficha-valor">${asig.nombre}</span>
                 </div>
+
+                <div class="ficha-fila">
+                    <span class="ficha-label">Acrónimo</span>
+                    <span class="ficha-valor">${asig.acronimo}</span>
+                </div>
+
+                <div class="ficha-fila">
+                    <span class="ficha-label">Profesor</span>
+                    <span class="ficha-valor">${asig.profesor}</span>
+                </div>
+
+                <div class="ficha-fila">
+                    <span class="ficha-label">Créditos</span>
+                    <span class="ficha-valor">${asig.creditos} ECTS</span>
+                </div>
+
+                <div class="ficha-fila">
+                    <span class="ficha-label">Curso</span>
+                    <span class="ficha-valor">${asig.curso}º · Cuatrimestre ${asig.cuatrimestre}</span>
+                </div>
+
+                <div class="ficha-fila">
+                    <span class="ficha-label">Alumno</span>
+                    <span class="ficha-valor">${alumno.nombre}</span>
+                </div>
+
+                <p class="lorem-text">${lorem}</p>
 
             </div>
 
@@ -182,6 +168,8 @@ function mostrarDetalles(id) {
 
 
 function mostrarCertificado() {
+
+    setNavActivo('btn-cert');
 
     const suma = asignaturas.reduce((total, a) => total + a.nota, 0);
     const media = (suma / asignaturas.length).toFixed(2);
@@ -196,9 +184,7 @@ function mostrarCertificado() {
                 <td>${a.acronimo}</td>
                 <td>${a.creditos} ECTS</td>
                 <td>
-                    <span class="${colorNota(a.nota)}">
-                        ${a.nota}
-                    </span>
+                    <span class="badge-nota ${colorNota(a.nota)}">${a.nota}</span>
                 </td>
             </tr>
         `;
@@ -206,21 +192,17 @@ function mostrarCertificado() {
 
     let html = `
 
-        <div class="d-flex justify-content-between align-items-center mb-4">
-
-            <h2 class="mb-0">Certificado académico</h2>
-
-            <button
-            onclick="window.print()"
-            class="btn btn-outline-success btn-sm">
-                🖨 Imprimir
+        <div class="cert-cabecera">
+            <div>
+                <div class="seccion-titulo">Certificado académico</div>
+                <div class="cert-alumno-info">
+                    ${alumno.nombre} &nbsp;·&nbsp; DNI: ${alumno.dni}
+                </div>
+            </div>
+            <button onclick="window.print()" class="btn-imprimir">
+                Imprimir
             </button>
-
         </div>
-
-        <p class="text-muted">
-            Alumno: <strong>${alumno.nombre}</strong> — DNI: ${alumno.dni}
-        </p>
 
         <table class="cert-tabla">
 
@@ -239,8 +221,9 @@ function mostrarCertificado() {
 
         </table>
 
-        <div class="cert-media">
-            <strong>Nota media:</strong> ${media}
+        <div class="cert-media-box">
+            <span class="cert-media-label">Nota media del expediente</span>
+            <span class="cert-media-valor">${media}</span>
         </div>
     `;
 
