@@ -70,6 +70,15 @@
     <url-pattern>/alumno/asignaturas</url-pattern>
   </servlet-mapping>
 
+	<servlet>
+    <servlet-name>CertificadoAlumno</servlet-name>
+    <servlet-class>servlets.alumno.CertificadoAlumno</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CertificadoAlumno</servlet-name>
+    <url-pattern>/alumno/certificado</url-pattern>
+  </servlet-mapping>
+
   <servlet>
     <servlet-name>DetalleAsignatura</servlet-name>
     <servlet-class>servlets.alumno.DetalleAsignatura</servlet-class>

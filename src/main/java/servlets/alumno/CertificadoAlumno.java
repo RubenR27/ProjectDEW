@@ -6,7 +6,7 @@ import datos.CentroEducativoClient;
 import com.google.gson.*;
 import java.io.IOException;
 
-public class ListaAsignaturas extends HttpServlet {
+public class CertificadoAlumno extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -28,7 +28,7 @@ public class ListaAsignaturas extends HttpServlet {
             return;
         }
 
-        // ── 1. Obtener nombre del alumno ──
+        // 1. Obtener nombre del alumno
         if (sesion.getAttribute("nombre") == null) {
             String jsonAlumno = cliente.get("/alumnos/" + dni, key);
             if (jsonAlumno != null) {
@@ -41,7 +41,7 @@ public class ListaAsignaturas extends HttpServlet {
             }
         }
 
-        // ── 2. OBTENER Y ENRIQUECER LAS ASIGNATURAS ──
+        // 2. Obtener y enriquecer asignaturas para el certificado
         String jsonNotas = cliente.get("/alumnos/" + dni + "/asignaturas", key);
         JsonArray asigsEnriquecidas = new JsonArray();
 
@@ -53,26 +53,23 @@ public class ListaAsignaturas extends HttpServlet {
                 if (notaObj.has("asignatura")) {
                     String acronimo = notaObj.get("asignatura").getAsString();
                     
-                    // Pedimos a la API toda la info de esta asignatura (créditos, nombre, curso...)
                     String jsonDetalle = cliente.get("/asignaturas/" + acronimo, key);
                     
                     if (jsonDetalle != null && !jsonDetalle.isEmpty()) {
                         JsonObject detalleObj = JsonParser.parseString(jsonDetalle).getAsJsonObject();
                         
-                        // Le pegamos la nota del alumno a la información completa de la asignatura
                         if (notaObj.has("nota")) {
                             detalleObj.add("nota", notaObj.get("nota"));
                         }
                         
-                        // Añadimos la asignatura completa a nuestra lista final
                         asigsEnriquecidas.add(detalleObj);
                     }
                 }
             }
         }
 
-        // ── 3. ENVIAR LOS DATOS AL JSP ──
+        // 3. Mandar el JSON al archivo JSP
         request.setAttribute("asignaturas", asigsEnriquecidas.toString());
-        request.getRequestDispatcher("/bienvenida.jsp").forward(request, response);
+        request.getRequestDispatcher("/alu_certificado.jsp").forward(request, response);
     }
 }

@@ -1,12 +1,12 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
-<%@ page import="org.json.*" %>
+<%@ page import="com.google.gson.*" %>
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NOL — Certificado</title>
-    <link rel="stylesheet" href="<%= request.getContextPath() %>/estils.css">
+    <link rel="stylesheet" href="<%= request.getContextPath() %>/estils2.css">
 </head>
 <body>
 
@@ -15,13 +15,21 @@
         String dni      = request.getRemoteUser();
         String[] partes = nombre != null ? nombre.split(" ") : new String[]{"?"};
         String iniciales = (partes[0].charAt(0) + "" + (partes.length > 1 ? partes[1].charAt(0) : "")).toUpperCase();
+        
         String asigJson  = (String) request.getAttribute("asignaturas");
-        JSONArray asigs  = asigJson != null ? new JSONArray(asigJson) : new JSONArray();
+        JsonArray asigs = new JsonArray();
+        if (asigJson != null && !asigJson.equals("[]")) {
+            asigs = JsonParser.parseString(asigJson).getAsJsonArray();
+        }
 
         double suma = 0;
         int    con  = 0;
-        for (int i = 0; i < asigs.length(); i++) {
-            double n = asigs.getJSONObject(i).optDouble("nota", -1);
+        for (int i = 0; i < asigs.size(); i++) {
+            JsonObject a = asigs.get(i).getAsJsonObject();
+            double n = -1.0;
+            if (a.has("nota") && !a.get("nota").isJsonNull()) {
+                try { n = a.get("nota").getAsDouble(); } catch (Exception e) {}
+            }
             if (n >= 0) { suma += n; con++; }
         }
         String media = con > 0 ? String.format("%.2f", suma / con) : "—";
@@ -69,7 +77,7 @@
                         <div class="perfil-info">
                             <div class="perfil-fila">
                                 <span class="perfil-key">Asignaturas</span>
-                                <span class="perfil-val"><%= asigs.length() %> matriculadas</span>
+                                <span class="perfil-val"><%= asigs.size() %> matriculadas</span>
                             </div>
                             <div class="perfil-fila">
                                 <span class="perfil-key">Curso</span>
@@ -124,9 +132,17 @@
 
             <tbody>
 
-                <% for (int i = 0; i < asigs.length(); i++) {
-                    JSONObject a    = asigs.getJSONObject(i);
-                    double nota     = a.optDouble("nota", -1);
+                <% for (int i = 0; i < asigs.size(); i++) {
+                    JsonObject a    = asigs.get(i).getAsJsonObject();
+                    String acr      = a.has("acronimo") ? a.get("acronimo").getAsString() : "";
+                    String nomAsig  = a.has("nombre") ? a.get("nombre").getAsString() : "";
+                    double creditos = a.has("creditos") ? a.get("creditos").getAsDouble() : 0;
+                    
+                    double nota     = -1.0;
+                    if (a.has("nota") && !a.get("nota").isJsonNull()) {
+                        try { nota = a.get("nota").getAsDouble(); } catch (Exception e) {}
+                    }
+                    
                     String notaStr  = nota >= 0 ? String.format("%.1f", nota) : "—";
                     String claseNota;
                     if      (nota >= 7) claseNota = "nota-alta";
@@ -136,9 +152,9 @@
                 %>
 
                     <tr>
-                        <td><%= a.optString("nombre", "") %></td>
-                        <td><%= a.optString("acronimo", "") %></td>
-                        <td><%= a.optDouble("creditos", 0) %> ECTS</td>
+                        <td><%= nomAsig %></td>
+                        <td><%= acr %></td>
+                        <td><%= creditos %> ECTS</td>
                         <td>
                             <span class="badge-nota <%= claseNota %>">
                                 <%= notaStr %>
