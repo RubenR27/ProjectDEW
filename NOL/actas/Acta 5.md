@@ -15,7 +15,7 @@
 *   **Secretaria:** Carmen Paredes Ramos
 *   **Participantes:**
     *   Remei Romero Ferrandis
-    *   Iván Ariza Galan
+    *   Iván Ariza Galán
     *   Diego Jornet Botella
     *   David Miralles Avilés
 
