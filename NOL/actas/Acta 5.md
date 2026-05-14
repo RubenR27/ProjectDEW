@@ -40,7 +40,9 @@
 
 ## Problemas Encontrados
 
-No se han encontrado problemas en esta sesión.
+Obstáculos técnicos encontrados.
+
+- **Técnico:** Tras hacer el LogIn, en la interfaz de listar asignaturas hemos encontrado un error 500, pese a que luego se ha solucionado.
 
 ---
 ## Reparto de Tareas Pendientes
