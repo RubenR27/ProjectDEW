@@ -1,4 +1,4 @@
-# Acta de Reunión - Proyecto DEW
+# Acta de Reunión - Grupo 3 DEW
 
 ## Información General
 | Información | Detalle |
