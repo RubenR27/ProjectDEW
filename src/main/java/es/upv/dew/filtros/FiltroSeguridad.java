@@ -24,6 +24,13 @@ public class FiltroSeguridad implements Filter {
         // Estos son los datos para simular el login en la base de datos de la uni
         usuariosLocal.put("pepe", new String[]{"12345678W", "123456"}); 
         usuariosLocal.put("ramon", new String[]{"23456733H", "123456"});
+        usuariosLocal.put("carlos", new String[]{"11223344A", "123456"});
+        usuariosLocal.put("ana", new String[]{"22334455B", "123456"});
+        usuariosLocal.put("luis", new String[]{"33445566C", "123456"});
+        usuariosLocal.put("sofia", new String[]{"44556677D", "123456"});
+        usuariosLocal.put("andres", new String[]{"55667788E", "123456"});
+        usuariosLocal.put("elena", new String[]{"66778899F", "123456"});
+        
     }
 
     @Override
