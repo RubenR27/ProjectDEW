@@ -13,7 +13,7 @@
 | Nombre | Rol | Contacto |
 |---|---|---|
 | Rubén Rico Martínez | Presidente | rricmar@etsinf.upv.es |
-| Carmen Paredes | Secretaria | cparram@etsinf.upv.es |
+| Carmen Paredes Ramos | Secretaria | cparram@etsinf.upv.es |
 | Ivan Ariza Galán | Programador | iarigal@etsinf.upv.es |
 | Remei Romero Ferrandis | Programadora | rromfer@etsinf.upv.es |
 | David Miralles Avilés  | Programador | dmiravi@etsinf.upv.es |
