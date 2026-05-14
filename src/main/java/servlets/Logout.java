@@ -15,6 +15,6 @@ public class Logout extends HttpServlet {
             sesion.invalidate();        // Borra key, dni, pass de sesión
         }
         request.logout();              // Cierra la sesión de seguridad de Tomcat
-        response.sendRedirect(request.getContextPath() + "/index.html");
+        response.sendRedirect(request.getContextPath() + "/index.jsp");
     }
 }

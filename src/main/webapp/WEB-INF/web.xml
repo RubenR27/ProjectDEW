@@ -39,7 +39,7 @@
   </filter-mapping>
 
   <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
 
   <servlet>
@@ -77,6 +77,15 @@
   <servlet-mapping>
     <servlet-name>CertificadoAlumno</servlet-name>
     <url-pattern>/alumno/certificado</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>PerfilAlumno</servlet-name>
+    <servlet-class>servlets.alumno.PerfilAlumno</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PerfilAlumno</servlet-name>
+    <url-pattern>/alumno/perfil</url-pattern>
   </servlet-mapping>
 
   <servlet>

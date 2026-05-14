@@ -145,10 +145,6 @@
 
     </div>
 
-    <div class="pie-pagina">
-        Grupo G01 &nbsp;·&nbsp; Ana López &nbsp;·&nbsp; Carlos Martínez &nbsp;·&nbsp; Lucía Pérez &nbsp;·&nbsp; David Ruiz
-    </div>
-
     <script>
         function togglePerfil() {
             document.getElementById('perfilDropdown').classList.toggle('visible');

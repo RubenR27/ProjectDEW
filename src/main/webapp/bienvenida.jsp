@@ -65,9 +65,16 @@
                                 <span class="perfil-val">ETSINF · UPV</span>
                             </div>
                         </div>
+                        
+                        <a href="<%= request.getContextPath() %>/alumno/perfil"
+                           class="btn-primario"
+                           style="width: 100%; margin-top: 15px; display: block; text-align: center; text-decoration: none; padding: 8px; font-size: 14px;">
+                            Ver mi perfil completo
+                        </a>
+
                         <a href="<%= request.getContextPath() %>/logout"
                            class="btn-salir"
-                           style="width: 100%; margin-top: 12px; display: block; text-align: center; text-decoration: none;">
+                           style="width: 100%; margin-top: 8px; display: block; text-align: center; text-decoration: none;">
                             Cerrar sesión
                         </a>
                     </div>
