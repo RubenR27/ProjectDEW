@@ -1,14 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+             https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         id="WebApp_ID" version="6.0">
+
   <display-name>ProjectDEW</display-name>
+
+  <context-param>
+    <param-name>ruta-logs</param-name>
+    <param-value>/home/dew/proyecto/logs/acceso.log</param-value>
+  </context-param>
+  <context-param>
+    <param-name>logs-activo</param-name>
+    <param-value>true</param-value>
+  </context-param>
+
+  <filter>
+    <filter-name>Logs</filter-name>
+    <filter-class>filtros.Logs</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>Logs</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <filter>
+    <filter-name>AuthFilter</filter-name>
+    <filter-class>filtros.AuthFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>AuthFilter</filter-name>
+    <url-pattern>/alumno/*</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>AuthFilter</filter-name>
+    <url-pattern>/profesor/*</url-pattern>
+  </filter-mapping>
+
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.xhtml</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.xhtml</welcome-file>
   </welcome-file-list>
+
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>servlets.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Logout</servlet-name>
+    <servlet-class>servlets.Logout</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Logout</servlet-name>
+    <url-pattern>/logout</url-pattern>
+  </servlet-mapping>
+  
+
+  <servlet>
+    <servlet-name>ListaAsignaturas</servlet-name>
+    <servlet-class>servlets.alumno.ListaAsignaturas</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListaAsignaturas</servlet-name>
+    <url-pattern>/alumno/asignaturas</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DetalleAsignatura</servlet-name>
+    <servlet-class>servlets.alumno.DetalleAsignatura</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DetalleAsignatura</servlet-name>
+    <url-pattern>/alumno/detalle</url-pattern>
+  </servlet-mapping>
+
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>Zona Alumno</web-resource-name>
+      <url-pattern>/alumno/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>rolalu</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>Zona Profesor</web-resource-name>
+      <url-pattern>/profesor/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>rolpro</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  <login-config>
+    <auth-method>FORM</auth-method>
+    <realm-name>NOL</realm-name>
+    <form-login-config>
+      <form-login-page>/loginPrueba.html</form-login-page>
+      <form-error-page>/LoginErrorPrueba.html</form-error-page>
+    </form-login-config>
+  </login-config>
+
+  <security-role>
+    <role-name>rolalu</role-name>
+  </security-role>
+  <security-role>
+    <role-name>rolpro</role-name>
+  </security-role>
+
 </web-app>
