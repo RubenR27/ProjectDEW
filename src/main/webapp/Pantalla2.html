@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOL — Notas Online</title>
+    <link rel="stylesheet" href="estils2.css">
+</head>
+<body>
+
+    <nav class="navbar">
+
+        <div class="navbar-marca">
+            NOL <span>·</span> Notas Online
+        </div>
+
+        <div class="navbar-acciones">
+
+            <button onclick="mostrarAsignaturas()" class="btn-nav" id="btn-asig">
+                Mis asignaturas
+            </button>
+
+            <button onclick="mostrarCertificado()" class="btn-nav" id="btn-cert">
+                Certificado
+            </button>
+
+            <div class="navbar-usuario">
+
+                <span class="chip-rol">Alumno</span>
+
+                <div class="perfil-wrapper">
+
+                    <div class="perfil-avatar" onclick="togglePerfil()">
+                        PG
+                    </div>
+
+                    <div class="perfil-dropdown" id="perfilDropdown">
+
+                        <div class="perfil-header">
+                            <div class="perfil-avatar-grande">PG</div>
+                            <div>
+                                <div class="perfil-nombre">Pepe García Sánchez</div>
+                                <div class="perfil-dni">DNI: 12345678W</div>
+                                <span class="chip-rol" style="margin-top: 6px; display: inline-block;">
+                                    Alumno
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="perfil-info">
+                            <div class="perfil-fila">
+                                <span class="perfil-key">Asignaturas</span>
+                                <span class="perfil-val">3 matriculadas</span>
+                            </div>
+                            <div class="perfil-fila">
+                                <span class="perfil-key">Curso</span>
+                                <span class="perfil-val">2025/2026</span>
+                            </div>
+                            <div class="perfil-fila">
+                                <span class="perfil-key">Centro</span>
+                                <span class="perfil-val">ETSINF · UPV</span>
+                            </div>
+                        </div>
+
+                        <button class="btn-salir" style="width: 100%; margin-top: 12px;">
+                            Cerrar sesión
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <div class="contenedor-principal" id="contenido"></div>
+
+    <div class="pie-pagina">
+        
+    </div>
+
+    <script src="app2.js"></script>
+
+</body>
+</html>
