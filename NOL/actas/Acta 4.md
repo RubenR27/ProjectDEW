@@ -43,6 +43,7 @@
 Obstáculos técnicos encontrados.
 
 - **Técnico:** El LogIn ha provocado problemas para autentificar a los usuarios.
+- **Técnico:** Fallos a la hora de ejecutar el servidor de Tomcat, pese a que finalmente se pudo ejecutar.
 
 ---
 ## Reparto de Tareas Pendientes
