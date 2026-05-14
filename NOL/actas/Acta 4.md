@@ -5,7 +5,7 @@
 | :--- | :--- |
 | **Fecha** | 13 de mayo de 2026 |
 | **Hora** | 13:00 - 14:30 |
-| **Sede/Canal** | Oficina |
+| **Sede/Canal** | Biblioteca |
 | **Estado** | Finalizada |
 
 ---
@@ -51,13 +51,13 @@ Tareas que tienen que estar acabas para la próxima sesión.
 
 | Responsable | Tarea Asignada | Fecha Límite |
 |---|---|---|
-| Rubén Rico Martínez | Terminar la corrección del código de LogIn para que funcione | 17/05 |
+| Rubén Rico Martínez | Terminar la corrección del código de LogIn para que funcione | 14/05 |
 
 
 --- 
 ## Próximos Pasos
-- **Próxima reunión:** 20 de mayo a las 11:30.
-- **Objetivo:** Repartir tareas de la siguiente entrega.
+- **Próxima reunión:** 14 de mayo a las 10:30.
+- **Objetivo:** Revisiones finales.
 
 ---
 **Firma de la secretaría:**
