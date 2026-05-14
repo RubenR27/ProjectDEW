@@ -25,6 +25,7 @@
 1. Juntar todas las ramas del GitHub.
 2. Revisar todos los puntos del proyecto.
 3. Terminar de realizar toda la documentación de la entrega.
+4. Realizar interfaz del alumno.
 
 ---
 
@@ -33,14 +34,13 @@
 *   **Punto 1:** Se han unido todas las ramas de trabajo individuales.
 *   **Punto 2:** Se ha revisado punto por punto todos los puntos del trabajo y hemos comprobado el correcto funcionamiento.
 *   **Punto 3:** Se ha realizado la documentación correspondiente al punto 4 de la entrega.
+*   **Punto 4:** Se ha realizado la interfaz del alumno.
   
 ---
 
 ## Problemas Encontrados
 
-Obstáculos técnicos encontrados.
-
-- **Técnico:** 
+No se han encontrado problemas en esta sesión.
 
 ---
 ## Reparto de Tareas Pendientes
