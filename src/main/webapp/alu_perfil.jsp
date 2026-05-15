@@ -61,14 +61,16 @@
             </div>
             
             <div class="perfil-info">
-                <h1><%= nombre %></h1>
-                <div class="chip-rol" style="display: inline-block; margin-bottom: 10px;">DNI: <%= dni %></div>
-                <p class="perfil-bio">
-                    Estudiante matriculado en el curso académico 2025/2026. 
-                    Acceso al sistema de gestión de calificaciones y expediente.
-                </p>
-                </div>
-        </header>
+			    <h1><%= nombre %></h1>
+			    <div class="chip-rol" style="display: inline-block; margin-bottom: 10px; background: #e9f9f4; color: #19a17a; border-color: #20c997;">
+			        <strong>DNI:</strong> <%= (dni != null) ? dni : "No identificado" %>
+			    </div>
+			    <p class="perfil-bio">
+			        Estudiante matriculado en el curso académico 2025/2026. 
+			        Acceso al sistema de gestión de calificaciones y expediente.
+			    </p>
+			</div>
+	        </header>
 
         <div class="stats-grid">
             <div class="stat-card">

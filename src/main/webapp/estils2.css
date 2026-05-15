@@ -10,13 +10,15 @@ body {
     color: #1a1a2e;
 }
 
+/* Cambiado a verde #20c997 */
 .navbar {
-    background-color: #0f3460;
+    background-color: #20c997; 
     padding: 0 32px;
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .navbar-marca {
@@ -29,8 +31,9 @@ body {
     letter-spacing: 0.5px;
 }
 
+/* Color de acento más claro para el punto/span */
 .navbar-marca span {
-    color: #4cc9f0;
+    color: #e9f9f4; 
 }
 
 .navbar-acciones {
@@ -56,9 +59,9 @@ body {
 }
 
 .btn-nav.activo {
-    background: rgba(76,201,240,0.2);
-    border-color: #4cc9f0;
-    color: #4cc9f0;
+    background: rgba(255,255,255,0.2);
+    border-color: white;
+    color: white;
 }
 
 .navbar-usuario {
@@ -71,9 +74,9 @@ body {
 }
 
 .chip-rol {
-    background: rgba(76,201,240,0.15);
-    color: #4cc9f0;
-    border: 1px solid rgba(76,201,240,0.3);
+    background: rgba(255,255,255,0.2);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.3);
     padding: 3px 10px;
     border-radius: 20px;
     font-size: 12px;
@@ -104,15 +107,15 @@ body {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background: #20c997;
-    color: #0f3460;
+    background: #ffffff;
+    color: #20c997;
     font-weight: 800;
     font-size: 13px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    border: 2px solid rgba(255,255,255,0.3);
+    border: 2px solid rgba(255,255,255,0.5);
     transition: border-color 0.2s;
     user-select: none;
 }
@@ -131,7 +134,7 @@ body {
     border: 1px solid #e2e8f0;
     border-radius: 12px;
     padding: 18px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
     z-index: 999;
 }
 
@@ -152,7 +155,7 @@ body {
     width: 48px;
     height: 48px;
     border-radius: 50%;
-    background: #0f3460;
+    background: #20c997;
     color: white;
     font-weight: 800;
     font-size: 16px;
@@ -215,7 +218,7 @@ body {
 .seccion-titulo {
     font-size: 22px;
     font-weight: 700;
-    color: #0f3460;
+    color: #19a17a; /* Tono verde oscuro para títulos */
     margin-bottom: 4px;
 }
 
@@ -237,7 +240,8 @@ body {
 }
 
 .asig-card:hover {
-    border-color: #0f3460;
+    border-color: #20c997;
+    background: #fafffd;
 }
 
 .asig-nombre {
@@ -267,35 +271,37 @@ body {
     text-align: center;
 }
 
+/* Colores de notas adaptados al verde principal */
 .nota-alta {
-    background: #dcfce7;
-    color: #166534;
+    background: #e6fffa;
+    color: #087f5b;
 }
 
 .nota-media {
-    background: #fef9c3;
+    background: #fff9db;
     color: #854d0e;
 }
 
 .nota-baja {
-    background: #fee2e2;
-    color: #991b1b;
+    background: #fff5f5;
+    color: #e03131;
 }
 
 .btn-detalle {
     background: white;
-    border: 1px solid #0f3460;
-    color: #0f3460;
+    border: 1px solid #20c997;
+    color: #20c997;
     padding: 7px 16px;
     border-radius: 6px;
     font-size: 13px;
     cursor: pointer;
     font-family: 'Segoe UI', Arial, sans-serif;
     transition: all 0.2s;
+    font-weight: 600;
 }
 
 .btn-detalle:hover {
-    background: #0f3460;
+    background: #20c997;
     color: white;
 }
 
@@ -313,8 +319,8 @@ body {
 }
 
 .btn-volver:hover {
-    border-color: #94a3b8;
-    color: #1a1a2e;
+    border-color: #20c997;
+    color: #20c997;
 }
 
 .detalle-grid {
@@ -327,14 +333,14 @@ body {
 .detalle-avatar {
     width: 120px;
     height: 120px;
-    background: #e6f0fb;
+    background: #f0faf7;
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 42px;
     font-weight: 700;
-    color: #0f3460;
+    color: #20c997;
     margin: 0 auto 16px auto;
 }
 
@@ -347,6 +353,7 @@ body {
     font-size: 36px;
     font-weight: 800;
     display: block;
+    color: #19a17a;
 }
 
 .nota-label {
@@ -402,7 +409,7 @@ body {
 }
 
 .cert-tabla thead tr {
-    background: #0f3460;
+    background: #20c997;
     color: white;
 }
 
@@ -426,8 +433,8 @@ body {
 
 .cert-media-box {
     margin-top: 20px;
-    background: #f0f7ff;
-    border-left: 4px solid #0f3460;
+    background: #f0faf7;
+    border-left: 4px solid #20c997;
     border-radius: 0 8px 8px 0;
     padding: 14px 20px;
     display: flex;
@@ -444,11 +451,11 @@ body {
 .cert-media-valor {
     font-size: 22px;
     font-weight: 800;
-    color: #0f3460;
+    color: #19a17a;
 }
 
 .btn-imprimir {
-    background: #0f3460;
+    background: #20c997;
     border: none;
     color: white;
     padding: 9px 20px;
@@ -457,10 +464,11 @@ body {
     cursor: pointer;
     font-family: 'Segoe UI', Arial, sans-serif;
     transition: background 0.2s;
+    font-weight: 600;
 }
 
 .btn-imprimir:hover {
-    background: #16213e;
+    background: #19a17a;
 }
 
 .cert-cabecera {
