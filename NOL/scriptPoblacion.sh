@@ -145,8 +145,7 @@ curl -s -X POST -H "content-type: application/json" \
   -c $CUCU -b $CUCU \
   --data "66778899F" \
   "$BASE/asignaturas/SBD/alumnos?key=$KEY"
-curl -s -X POST -H "content-type: application
-/json" \
+curl -s -X POST -H "content-type: application/json" \
   -c $CUCU -b $CUCU \
   --data "66778899F" \
   "$BASE/asignaturas/REC/alumnos?key=$KEY"
@@ -227,4 +226,112 @@ curl -s -X PUT -H "content-type: application/json" \
   "$BASE/alumnos/66778899F/asignaturas/REC?key=$KEY"
 echo -e "\n  → Elena en REC: 7.5"
 
+echo "============================================"
+
+
+
+
+
+# -- Ramon Garcia (23456733H) pone notas en DEW --
+echo ""
+echo "  Login como Ramon Garcia (DEW)..."
+KEY=$(curl -s \
+  --data '{"dni":"23456733H","password":"123456"}' \
+  -X POST \
+  -H "content-type: application/json" \
+  -c $CUCU -b $CUCU \
+  "$BASE/login")
+echo "  Key: $KEY"
+ 
+curl -s -X PUT -H "content-type: application/json" \
+  -c $CUCU -b $CUCU \
+  --data '7.5' \
+  "$BASE/alumnos/12345678W/asignaturas/DEW?key=$KEY"
+echo -e "\n  → Pepe en DEW: 7.5"
+ 
+curl -s -X PUT -H "content-type: application/json" \
+  -c $CUCU -b $CUCU \
+  --data '8.0' \
+  "$BASE/alumnos/23456387R/asignaturas/DEW?key=$KEY"
+echo -e "\n  → Maria en DEW: 8.0"
+ 
+curl -s -X PUT -H "content-type: application/json" \
+  -c $CUCU -b $CUCU \
+  --data '6.5' \
+  "$BASE/alumnos/93847525G/asignaturas/DEW?key=$KEY"
+echo -e "\n  → Laura en DEW: 6.5"
+ 
+# -- Pedro Valderas (10293756L) pone notas en IAP (Pepe y Miguel) --
+echo ""
+echo "  Login como Pedro Valderas (IAP y DCU)..."
+KEY=$(curl -s \
+  --data '{"dni":"10293756L","password":"123456"}' \
+  -X POST \
+  -H "content-type: application/json" \
+  -c $CUCU -b $CUCU \
+  "$BASE/login")
+echo "  Key: $KEY"
+ 
+curl -s -X PUT -H "content-type: application/json" \
+  -c $CUCU -b $CUCU \
+  --data '9.0' \
+  "$BASE/alumnos/12345678W/asignaturas/IAP?key=$KEY"
+echo -e "\n  → Pepe en IAP: 9.0"
+ 
+curl -s -X PUT -H "content-type: application/json" \
+  -c $CUCU -b $CUCU \
+  --data '5.5' \
+  "$BASE/alumnos/34567891F/asignaturas/IAP?key=$KEY"
+echo -e "\n  → Miguel en IAP: 5.5"
+ 
+# -- Pedro Valderas (10293756L) pone notas en DCU (Pepe y Miguel) --
+curl -s -X PUT -H "content-type: application/json" \
+  -c $CUCU -b $CUCU \
+  --data '8.0' \
+  "$BASE/alumnos/12345678W/asignaturas/DCU?key=$KEY"
+echo -e "\n  → Pepe en DCU: 8.0"
+ 
+curl -s -X PUT -H "content-type: application/json" \
+  -c $CUCU -b $CUCU \
+  --data '6.0' \
+  "$BASE/alumnos/34567891F/asignaturas/DCU?key=$KEY"
+echo -e "\n  → Miguel en DCU: 6.0"
+ 
+# -- Joan Fons (65748923M) pone nota en IAP (Laura) --
+echo ""
+echo "  Login como Joan Fons (IAP)..."
+KEY=$(curl -s \
+  --data '{"dni":"65748923M","password":"123456"}' \
+  -X POST \
+  -H "content-type: application/json" \
+  -c $CUCU -b $CUCU \
+  "$BASE/login")
+echo "  Key: $KEY"
+ 
+curl -s -X PUT -H "content-type: application/json" \
+  -c $CUCU -b $CUCU \
+  --data '7.0' \
+  "$BASE/alumnos/93847525G/asignaturas/IAP?key=$KEY"
+echo -e "\n  → Laura en IAP: 7.0"
+ 
+# -- Manoli Albert (06374291A) pone nota en DCU (Maria) --
+echo ""
+echo "  Login como Manoli Albert (DCU)..."
+KEY=$(curl -s \
+  --data '{"dni":"06374291A","password":"123456"}' \
+  -X POST \
+  -H "content-type: application/json" \
+  -c $CUCU -b $CUCU \
+  "$BASE/login")
+echo "  Key: $KEY"
+ 
+curl -s -X PUT -H "content-type: application/json" \
+  -c $CUCU -b $CUCU \
+  --data '9.5' \
+  "$BASE/alumnos/23456387R/asignaturas/DCU?key=$KEY"
+echo -e "\n  → Maria en DCU: 9.5"
+ 
+echo ""
+echo "============================================"
+echo " Notas asignadas correctamente."
 echo "============================================"

@@ -137,8 +137,6 @@
                     <span class="ficha-valor"><%= nombre %></span>
                 </div>
 
-                <p class="lorem-text"><%= lorem %></p>
-
             </div>
 
         </div>

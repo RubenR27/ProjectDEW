@@ -15,7 +15,7 @@ public class LoginServlet extends HttpServlet {
         String pass = request.getParameter("j_password");
 
         if (dni == null || pass == null || dni.isBlank() || pass.isBlank()) {
-            response.sendRedirect(request.getContextPath() + "/LoginErrorPrueba.html");
+            response.sendRedirect(request.getContextPath() + "/login_error.jsp");
             return;
         }
 
@@ -30,7 +30,7 @@ public class LoginServlet extends HttpServlet {
         try {
             request.login(dni, pass);
         } catch (ServletException e) {
-            response.sendRedirect(request.getContextPath() + "/LoginErrorPrueba.html");
+            response.sendRedirect(request.getContextPath() + "/login_error.jsp");
             return;
         }
 
@@ -63,7 +63,7 @@ public class LoginServlet extends HttpServlet {
             response.sendRedirect(request.getContextPath() + "/profesor/asignaturas");
         } else {
             try { request.logout(); } catch (Exception ex) {}
-            response.sendRedirect(request.getContextPath() + "/LoginErrorPrueba.html");
+            response.sendRedirect(request.getContextPath() + "/login_error.jsp");
         }
     }
 }
