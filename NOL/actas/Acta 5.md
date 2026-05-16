@@ -4,7 +4,7 @@
 | Información | Detalle |
 | :--- | :--- |
 | **Fecha** | 14 de mayo de 2026 |
-| **Hora** | 10:30 - 12:30 |
+| **Hora** | 10:30 - 13:30 |
 | **Sede/Canal** | Biblioteca |
 | **Estado** | Finalizada |
 
