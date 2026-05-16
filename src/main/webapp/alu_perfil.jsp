@@ -56,9 +56,17 @@
         </a>
         <header class="perfil-header">
             <div class="perfil-foto-container">
-                <img src="https://ui-avatars.com/api/?name=<%= nombre.replace(" ", "+") %>&background=0f3460&color=fff&size=200" alt="Foto de perfil" class="perfil-foto">
-                <span class="status-badge">Activo</span>
-            </div>
+		        
+		        <% 
+		            String fotoUrl = request.getContextPath() + "/img/fotos/" + dni + ".jpg";      
+		        %>
+		        <img src="<%= fotoUrl %>" 
+		             onerror="this.onerror=null; this.src='<%= request.getContextPath() %>/img/fotos/default.jpg';" 
+		             alt="Foto de perfil" 
+		             class="perfil-foto">
+		             
+		        <span class="status-badge">Activo</span>
+		    </div>
             
             <div class="perfil-info">
 			    <h1><%= nombre %></h1>

@@ -241,7 +241,7 @@ body {
 }
 
 /* =========================================
-   6. LAYOUT PERFIL (EL QUE SE DESCUADRÓ)
+   6. LAYOUT PERFIL
    ========================================= */
 .layout-perfil {
     display: grid;
@@ -328,10 +328,37 @@ body {
     margin-bottom: 4px;
 }
 
+.equipo-subtitulo {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.lista-integrantes {
+    list-style: none; /* QUITA LOS PUNTOS DEFECTUOSOS */
+    padding: 0;
+}
+
+.lista-integrantes li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    font-size: 14px;
+    color: var(--text-main);
+    display: flex;
+    align-items: center; /* Alinea en vertical los números con los nombres */
+    font-weight: 500;
+}
+
+.lista-integrantes li:last-child {
+    border-bottom: none;
+}
+
 .lista-integrantes .numero {
     font-size: 10px;
     background: var(--white);
-    color: var(--primary); /* Cambiado a verde */
+    color: var(--primary);
     width: 24px;
     height: 24px;
     display: flex;
@@ -341,6 +368,7 @@ body {
     margin-right: 12px;
     font-weight: 700;
     border: 1px solid #e2e8f0;
+    flex-shrink: 0;
 }
 
 /* Botones y Footer */
@@ -378,8 +406,8 @@ body {
 }
 
 .perfil-info .chip-rol {
-    background: #e9f9f4 !important; /* Verde muy clarito */
-    color: #19a17a !important;      /* Verde oscuro para leer bien */
+    background: #e9f9f4 !important;
+    color: #19a17a !important;      
     border: 1px solid #20c997;
     font-weight: 700;
 }
