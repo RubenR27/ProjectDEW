@@ -1,9 +1,9 @@
 # Acta de Constitución del Equipo
 
-**Proyecto:** ProjectDEW 
+**Grupo:** 3 
 **Asignatura:** DEW 
-**Fecha:** 30/04/2026  
-**Hora:** 11:30 - 13:00 
+**Fecha:** 30/04/2026 
+**Hora:** 11:30 - 13:00  
 **Lugar / Modalidad:** Presencial
 
 ---
@@ -13,8 +13,8 @@
 | Nombre | Rol | Contacto |
 |---|---|---|
 | Rubén Rico Martínez | Presidente | rricmar@etsinf.upv.es |
-| Carmen Paredes | Secretaria | cparram@etsinf.upv.es |
-| Ivan Ariza Galán | Programador | iarigal@etsinf.upv.es |
+| Carmen Paredes Ramos | Secretaria | cparram@etsinf.upv.es |
+| Iván Ariza Galán | Programador | iarigal@etsinf.upv.es |
 | Remei Romero Ferrandis | Programadora | rromfer@etsinf.upv.es |
 | David Miralles Avilés  | Programador | dmiravi@etsinf.upv.es |
 | Diego Jornet Botella | Programador | djorbot@etsinf.upv.es |
@@ -52,7 +52,7 @@ Se acuerda utilizar las siguientes herramientas para la gestión y coordinación
 
 Se acuerda la siguiente organización para las reuniones del equipo:
 
-* **Organziación de las sesiones:** Se acordará las tareas que hay que realizar cada semana y que va a realizar cada integrante en la sesión, organizando una reunión fuera de horario de clase si lo fuese necesario. Además, se compartirán los resultados al final cada la sesión.
+* **Organziación de las sesiones:** Se acordará las tareas que hay que realizar cada semana y que va a realizar cada integrante en la sesión, organizando una reunión fuera de horario de clase si fuese necesario. Además, se compartirán los resultados al final cada la sesión.
 * **Reuniones fuera de clase:** Online los días que se consideren oportunos por la carga de trabajo correspondiente a cada semana.
 * **Medio principal de comunicación:** Teams / WhatsApp / Discord
 * **Método para reparto de tareas:** Por consenso y reparto equitativo
@@ -68,5 +68,4 @@ Se acuerda la siguiente organización para las reuniones del equipo:
 
 ---
 
-**Firma de la secretaria:**  
-Carmen Paredes
+**Firma de la secretaria:** Carmen Paredes

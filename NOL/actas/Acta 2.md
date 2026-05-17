@@ -1,4 +1,4 @@
-# Acta de Reunión - Proyecto DEW
+# Acta de Reunión - Grupo 3 DEW
 
 ## Información General
 | Información | Detalle |
@@ -11,11 +11,11 @@
 ---
 
 ## Asistentes
-*   **Presidente::** Rubén Rico Martínez
+*   **Presidente:** Rubén Rico Martínez
 *   **Secretaria:** Carmen Paredes Ramos
 *   **Participantes:**
     *   Remei Romero Ferrandis
-    *   Iván Ariza Galan
+    *   Iván Ariza Galán
     *   Diego Jornet Botella
     *   David Miralles Avilés
 
@@ -71,4 +71,3 @@ Tareas que tienen que estar acabas para la próxima sesión.
 ---
 **Firma de la secretaría:**
 Carmen Paredes
-
