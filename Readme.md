@@ -50,7 +50,16 @@ Edita el archivo `tomcat-users.xml` de tu servidor para incluir los roles y usua
 ### 4. Ejecutar el servidor de datos y poblarlo
 Lanza el script `lanza-centroeducativo.sh` y una vez este iniciado, que suele tarda 10 segundos como máximo, ahora puedes poblar la base de datos usando el script que se encuentra en nuestro proyecto: [scriptPoblacion.sh](./NOL/scriptPoblacion.sh).
 
-### 5. Ejecutar el proyecto en el servidor que hemos modificado tomcat-users.xml
+### 5. Logs
+Asegurarse de cambiar la ruta de los logs en el web.xml, en esta parte:
+```xml
+ <context-param>
+    <param-name>ruta-logs</param-name>
+    <param-value>/home/dew/proyecto/logs/acceso.log</param-value>
+  </context-param>
+  ```
+
+### 6. Ejecutar el proyecto en el servidor que hemos modificado tomcat-users.xml
 Ahora puedes lanzar nuestro proyecto en el servidor deseado, donde hemos modificado el tomcat-users.xml, cuando el servidor este en funcionando, puedes abrir el navegador deseado y entrar a nuestra aplicación en local usando el siguiente enlace: http://localhost:8080/ProjectDEW/ .
 Ese enlace funcionaría si tu servidor usa el puerto 8080 al lanzarse, si no lo hace debes de cambiar el 8080 por el puerto en el que lanza la aplicación tu servidor.
 
