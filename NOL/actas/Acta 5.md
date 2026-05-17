@@ -43,6 +43,7 @@
 Obstáculos técnicos encontrados.
 
 - **Técnico:** Tras hacer el LogIn, en la interfaz de listar asignaturas hemos encontrado un error 500, pese a que luego se ha solucionado.
+- **Técnico:** Al descomprimir el proyecto, no funciona de primeras con los ajustes predeterminados de eclipse. Tras distintas configuraciones, se ha logrado solucionar.
 
 ---
 ## Reparto de Tareas Pendientes
