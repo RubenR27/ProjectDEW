@@ -68,4 +68,12 @@ Se acuerda la siguiente organización para las reuniones del equipo:
 
 ---
 
-**Firma de la secretaria:** Carmen Paredes
+**Validación de todos los participantes:**
+| Participante | Validación |
+|---|---|
+| Remei Romero Ferrandis| Sí |
+| Diego Jornet Botella| Sí | 
+| Carmen Paredes Ramos| Sí |
+| Iván Ariza Galán| Sí |
+| David Miralles Avilés| Sí | 
+| Ruben Rico Martínez| Sí |
