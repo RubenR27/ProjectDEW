@@ -61,5 +61,12 @@ Tareas que tienen que estar acabas para la próxima sesión.
 - **Objetivo:** Revisiones finales.
 
 ---
-**Firma de la secretaría:**
-Carmen Paredes
+**Validación de todos los participantes:**
+| Participante | Validación |
+|---|---|
+| Remei Romero Ferrandis| Sí |
+| Diego Jornet Botella| Sí | 
+| Carmen Paredes Ramos| Sí |
+| Iván Ariza Galán| Sí |
+| David Miralles Avilés| Sí | 
+| Ruben Rico Martínez| Sí |
